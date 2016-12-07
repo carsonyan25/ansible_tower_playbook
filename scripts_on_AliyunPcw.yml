@@ -10,4 +10,11 @@
    - name: remove_apache_log
      script: /app/ansible-jobs/scripts/AliyunPcw/remove_server_log.sh
      tags: remove_apache_log
- 
+     
+   - name: auto_remove_sync_log
+     script: /app/ansible-jobs/scripts/AliyunPcw/auto_remove_sync_log.sh
+     tags: auto_remove_sync_log
+
+   - name: db_sync_to_slave_full
+     script: /app/ansible-jobs/scripts/AliyunPcw/db_sync_to_slave.sh full
+     tags: db_sync_to_slave_full
