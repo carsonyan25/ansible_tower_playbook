@@ -1,0 +1,27 @@
+---
+  - hosts: 121.40.239.22
+    gather_facts: no
+
+    tasks:
+    - name: restart_apache_on_AliyunTest
+      shell: apachectl restart
+      tags: restart_apache_on_AliyunTest
+    
+    - name: start_apache_on_AliyunTest
+      shell: apachectl start
+      tags: start_apache_on_AliyunTest
+
+
+    - name: stop_apache_on_AliyunTest
+      shell: apachectl stop
+      tags: stop_apache_on_AliyunTest
+      
+      
+    - name: stop_mysqld_on_AliyunTest
+      shell: mysqldadmin -uroot -paecsqlyou  shutdown 
+      tags: stop_mysqld_on_AliyunTest
+
+
+    - name: start_mysqld_on_AliyunTest
+      shell: mysqld_safe --user=mysql &
+      tags: start_mysqld_on_AliyunTest

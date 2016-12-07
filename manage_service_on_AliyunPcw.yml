@@ -1,0 +1,27 @@
+---
+  - hosts: 139.196.237.112
+    gather_facts: no
+
+    tasks:
+    - name: restart_apache_on_pcw
+      shell: apachectl restart
+      tags: restart_apache_on_pcw
+    
+    - name: start_apache_on_pcw
+      shell: apachectl start
+      tags: start_apache_on_pcw
+
+
+    - name: stop_apache_on_pcw
+      shell: apachectl stop
+      tags: stop_apache_on_pcw
+      
+      
+    - name: stop_mysqld_on_pcw
+      shell: mysqldadmin -uroot -paecsqlyou  shutdown 
+      tags: stop_mysqld_on_pcw
+
+
+    - name: start_mysqld_on_pcw
+      shell: mysqld_safe --user=mysql &
+      tags: start_mysqld_on_pcw
