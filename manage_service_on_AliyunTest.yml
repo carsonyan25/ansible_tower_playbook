@@ -1,5 +1,5 @@
 ---
-  - hosts: 121.40.239.22
+  - hosts: all
     gather_facts: no
 
     tasks:

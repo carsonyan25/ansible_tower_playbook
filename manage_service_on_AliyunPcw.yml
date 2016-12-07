@@ -1,5 +1,5 @@
 ---
-  - hosts: 139.196.237.112
+  - hosts: all
     gather_facts: no
 
     tasks:

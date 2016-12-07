@@ -1,5 +1,5 @@
 ---
-  - hosts: 139.224.26.199
+  - hosts: cad.pcw365.com
     gather_facts: no
 
     tasks:
