@@ -1,0 +1,11 @@
+---
+- hosts: 119.84.79.51 
+  gather_facts: no
+
+  tasks:
+  - name: check files in caddownload on Tianji server
+    shell: ls -alR /home/download/aec/aec/caddownload
+
+...
+
+
