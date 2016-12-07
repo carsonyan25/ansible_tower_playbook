@@ -1,0 +1,12 @@
+---
+ - hosts: 139.196.237.112
+   gather_facts: no
+
+   tasks: 
+   - name: goodsinfo
+     script: /app/ansible-jobs/scripts/AliyunPcw/goodsinfo.sh
+     
+   - name: remove_apache_log
+     script: /app/ansible-jobs/scripts/AliyunPcw/remove_server_log.sh
+
+ 
