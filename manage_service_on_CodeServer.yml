@@ -3,25 +3,25 @@
     gather_facts: no
 
     tasks:
-    - name: restart_apache_on_codSever
+    - name: restart_apache_on_CodeServer
       shell: apachectl restart
-      tags: restart_apache_on_codSever
+      tags: restart_apache_on_CodeServer
     
-    - name: start_apache_on_codSever
+    - name: start_apache_on_CodeServer
       shell: apachectl start
-      tags: start_apache_on_codSever
+      tags: start_apache_on_CodeServer
 
 
-    - name: stop_apache_on_codSever
+    - name: stop_apache_on_CodeServer
       shell: apachectl stop
-      tags: stop_apache_on_codSever
+      tags: stop_apache_on_CodeServer
       
       
-    - name: stop_mysqld_on_codSever
+    - name: stop_mysqld_on_CodeServer
       shell: mysqldadmin -uroot -pf5x/pdWUtDgAyz5R  shutdown 
-      tags: stop_mysqld_on_codSever
+      tags: stop_mysqld_on_CodeServer
 
 
-    - name: start_mysqld_on_codSever
+    - name: start_mysqld_on_CodeServer
       shell: mysqld_safe --user=mysql &
-      tags: start_mysqld_on_codSever
+      tags: start_mysqld_on_CodeServer
