@@ -5,8 +5,9 @@
    tasks: 
    - name: goodsinfo
      script: /app/ansible-jobs/scripts/AliyunPcw/goodsinfo.sh
-     
+     tags: goodsinfo       
+ 
    - name: remove_apache_log
      script: /app/ansible-jobs/scripts/AliyunPcw/remove_server_log.sh
-
+     tags: remove_apache_log
  
