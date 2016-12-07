@@ -6,6 +6,4 @@
   - name: check files in caddownload on Tianji server
     shell: ls -alR /home/download/aec/aec/caddownload
 
-...
-
 
