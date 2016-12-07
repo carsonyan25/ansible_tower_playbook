@@ -1,0 +1,15 @@
+---
+- hosts: 139.224.26.199
+  gather_facts: no
+
+  tasks:
+  - name: Check the files on homecost
+    command: ls -al /home/web/webapps/ROOT/download/homecost/
+  - name: Check the files on DWGView2011
+    shell: ls -al /home/web/webapps/ROOT/download/DWGView2011/
+  - name: Check the files on pincaibao 
+    shell: ls -al /home/web/webapps/ROOT/download/pincaibao/ 
+  - name: Check the files on homegantt 
+    shell: ls -al /home/web/webapps/ROOT/download/homegantt/
+  - name: Check the files on  cadview
+    shell: ls -al /home/web/webapps/ROOT/download/cadview/ 
