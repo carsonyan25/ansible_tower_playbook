@@ -18,7 +18,7 @@
       
       
     - name: stop_mysqld_on_AliyunTest
-      shell: mysqldadmin -uroot -paecsqlyou  shutdown 
+      shell: mysqladmin -uroot -paecsqlyou  shutdown 
       tags: stop_mysqld_on_AliyunTest
 
 

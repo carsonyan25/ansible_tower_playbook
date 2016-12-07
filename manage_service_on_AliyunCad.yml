@@ -18,7 +18,7 @@
       
       
     - name: stop_mysqld_on_cad
-      shell: mysqldadmin -uroot -pIAGo1oy-881Nt2K\\  shutdown 
+      shell: mysqladmin -uroot -pIAGo1oy-881Nt2K\\  shutdown 
       tags: stop_mysqld_on_cad
 
 

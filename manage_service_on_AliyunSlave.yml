@@ -18,7 +18,7 @@
       
       
     - name: stop_mysqld_on_slave
-      shell: mysqldadmin -uroot -pyE5nr$dAoCoPGRUk  shutdown 
+      shell: mysqladmin -uroot -pyE5nr$dAoCoPGRUk  shutdown 
       tags: stop_mysqld_on_slave
 
 

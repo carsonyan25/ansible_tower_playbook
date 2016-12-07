@@ -18,7 +18,7 @@
       
       
     - name: stop_mysqld_on_CodeServer
-      shell: mysqldadmin -uroot -pf5x/pdWUtDgAyz5R  shutdown 
+      shell: mysqladmin -uroot -pf5x/pdWUtDgAyz5R  shutdown 
       args:
         chdir: /app/mysql5/bin/
       tags: stop_mysqld_on_CodeServer
