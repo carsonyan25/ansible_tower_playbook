@@ -6,27 +6,27 @@
     - name: copy lamp-pcw packages 
       copy:
         src: /app/ansible-jobs/software/lamp-pcw
-        desc: /app/software/package
-        owner: root
-        group: root
+        dest: /app/software/package
+        owner: tower
+        group: tower
         mode: "u=rw,g=r,o=r"
       tags: copy lamp-pcw packages
 
     - name: copy lamp-common packages 
       copy:
         src: /app/ansible-jobs/software/lamp-common
-        desc: /app/software/package
-        owner: root
-        group: root
+        dest: /app/software/package
+        owner: tower
+        group: tower
         mode: "u=rw,g=r,o=r"
       tags: copy lamp-common packages
 
     - name: copy lnmp packages 
       copy:
         src: /app/ansible-jobs/software/lnmp
-        desc: /app/software/package
-        owner: root
-        group: root
+        dest: /app/software/package
+        owner: tower
+        group: tower
         mode: "u=rw,g=r,o=r"
       tags: copy lnmp packages
 
