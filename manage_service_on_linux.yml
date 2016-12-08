@@ -1,0 +1,48 @@
+---
+  - hosts: all
+    gather_facts: no
+
+    tasks:
+    - name: restart_apache
+      shell: apachectl restart
+      tags: restart_apache
+    
+    - name: start_apache
+      shell: apachectl start
+      tags: start_apache
+
+
+    - name: stop_apache
+      shell: apachectl stop
+      tags: stop_apache
+      
+      
+    - name: restart_mysqld
+      service: 
+        name: mysqld
+        state: restarted 
+      tags: restart_mysqld
+
+    - name: start_mysqld
+      service: 
+        name: mysqld
+        state: started 
+      tags: start_mysqld
+
+    - name: stop_mysqld
+      service: 
+        name: mysqld
+        state: stopped 
+      tags: stop_mysqld
+    
+    - name: reload_nginx
+      shell: nginx -s reload 
+      tags: reload_nignx
+
+    - name: start_nginx
+      shell: nginx  
+      tags: start_nignx
+
+    - name: stop_nginx
+      shell: nginx -s stop 
+      tags: stop_nignx
