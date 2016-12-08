@@ -1,5 +1,5 @@
 ---
- - hosts: 139.196.237.112
+ - hosts: www.pcw365.com
    gather_facts: no
 
    tasks: 
