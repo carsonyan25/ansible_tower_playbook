@@ -8,7 +8,7 @@
         src: /app/ansible-jobs/software/lamp-pcw
         dest: /app/software/package
         owner: tower
-        group: tower
+        group: wheel
         mode: "u=rw,g=r,o=r"
       tags: copy lamp-pcw packages
 
@@ -17,7 +17,7 @@
         src: /app/ansible-jobs/software/lamp-common
         dest: /app/software/package
         owner: tower
-        group: tower
+        group: wheel
         mode: "u=rw,g=r,o=r"
       tags: copy lamp-common packages
 
@@ -26,7 +26,7 @@
         src: /app/ansible-jobs/software/lnmp
         dest: /app/software/package
         owner: tower
-        group: tower
+        group: wheel
         mode: "u=rw,g=r,o=r"
       tags: copy lnmp packages
 
