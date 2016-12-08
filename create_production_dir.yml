@@ -4,6 +4,6 @@
   
     tasks:
     - name: create production dir
-      script:  /app/ansible-jobs/scripts/create_production_dir.sh "{{absolute_path}}"
+      script:  /app/ansible-jobs/scripts/public/create_production_dir.sh "{{absolute_path}}"
       tags: create production dir
     
