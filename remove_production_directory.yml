@@ -1,0 +1,9 @@
+---
+  - hosts: all
+    gather_facts: no
+  
+    tasks:
+    - name: remove production directory
+      script:   /app/ansible-jobs/scripts/public/remove_production_directory.sh "{{absolute_path}}"
+      tags: remove production directory
+    

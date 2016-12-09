@@ -1,9 +1,0 @@
----
-  - hosts: all
-    gather_facts: no
-  
-    tasks:
-    - name: create production dir
-      script:   /app/ansible-jobs/scripts/public/create_production_dir.sh "{{absolute_path}}"
-      tags: create production dir
-    
