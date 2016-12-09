@@ -3,50 +3,52 @@
     gather_facts: no
 
     tasks:
-    - name: restart_apache
+    - name: restart apache
       service: 
         name: apache
         state: restarted
-      tags: restart_apache
-    - name: start_apache
+      tags: restart apache
+    - name: start apache
       service: 
         name: apache
         state: started
-      tags: start_apache
-    - name: stop_apache
+      tags: start apache
+    - name: stop apache
       service: 
         name: apache
         state: stopped
-      tags: stop_apache
+      tags: stop apache
       
-    - name: restart_mysqld
+    - name: restart mysqld
       service: 
         name: mysqld
         state: restarted 
-      tags: restart_mysqld
-    - name: start_mysqld
+      tags: restart mysqld
+    - name: start mysqld
       service: 
         name: mysqld
         state: started 
-      tags: start_mysqld
-    - name: stop_mysqld
+      tags: start mysqld
+    - name: stop mysqld
       service: 
         name: mysqld
         state: stopped 
-      tags: stop_mysqld
+      tags: stop mysqld
     
-    - name: reload_nginx
+    - name: reload nginx
       service: 
         name: nginx 
         state: reloaded 
-      tags: reload_nignx
-    - name: start_nginx
+      tags: reload nignx
+    - name: start nginx
       service: 
         name: nginx 
         state: started 
-      tags: start_nignx
-    - name: quit_nginx
+      tags: start nignx
+    - name: quit nginx
       service: 
         name: nginx
         state: quited
-      tags: quit_nignx
+      tags: quit nignx
+
+...
