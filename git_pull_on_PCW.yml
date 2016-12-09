@@ -4,12 +4,13 @@
     vars:
       MobileAPI2: /home/server/apache2/htdocs/ecshop/ecshop2/MobileAPI2  
       MobileAPI: /home/server/apache2/htdocs/ecshop/ecshop2/MobileAPI  
+      script_name: /app/ansible-jobs/scripts/public/git_management.py 
 
     tasks:
     - name: Git pull on ecshop/ecshop2/MobileAPI2
-      shell: cd "{{MobileAPI2}}"  \&\& git pull 
+      script:  "{{script_name}}" "{{MobileAPI2}}"
       tags: pull MobileAPI2
 
     - name: Git pull on ecshop/ecshop2/MobileAPI
-      shell: cd "{{MobileAPI}}"  \&\& git pull 
+      script:  "{{script_name}}" "{{MobileAPI}}"
       tags: pull MobileAPI
