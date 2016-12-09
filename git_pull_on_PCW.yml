@@ -8,7 +8,7 @@
 
     tasks:
     - name: Git pull on ecshop/ecshop2/MobileAPI2
-      script:  "{{script_name}}" "{{MobileAPI2}}"
+      script: "{{script_name}}"  "{{MobileAPI2}}"
       tags: pull MobileAPI2
 
     - name: Git pull on ecshop/ecshop2/MobileAPI
