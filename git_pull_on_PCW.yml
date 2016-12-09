@@ -1,0 +1,15 @@
+---
+  - hosts: www.pcw365.com
+    gather_facts: no
+    vars:
+      MobileAPI2: /home/server/apache2/htdocs/ecshop/ecshop2/MobileAPI2  
+      MobileAPI: /home/server/apache2/htdocs/ecshop/ecshop2/MobileAPI  
+
+    tasks:
+    - name: Git pull on ecshop/ecshop2/MobileAPI2
+      shell: cd "{{MobileAPI2}}"  \&\& git pull 
+      tags: pull MobileAPI2
+
+    - name: Git pull on ecshop/ecshop2/MobileAPI
+      shell: cd "{{MobileAPI}}"  \&\& git pull 
+      tags: pull MobileAPI
