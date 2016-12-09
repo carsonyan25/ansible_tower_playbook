@@ -8,7 +8,7 @@
 
     tasks:
     - name: Git pull on MobileAPI2
-      script: " {{ git_script }} "  " {{ MobileAPI2 }} "
+      - script: " {{ git_script }} "  " {{ MobileAPI2 }} "
       tags: pull MobileAPI2
 
 
