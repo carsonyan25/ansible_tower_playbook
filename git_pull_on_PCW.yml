@@ -2,11 +2,14 @@
   - hosts: www.pcw365.com
     gather_facts: no
     vars:
-      MobileAPI2: /home/server/apache2/htdocs/ecshop/ecshop2/MobileAPI2  
-      MobileAPI: /home/server/apache2/htdocs/ecshop/ecshop2/MobileAPI  
+      mobileapi2: /home/server/apache2/htdocs/ecshop/ecshop2/MobileAPI2  
+      mobileapi: /home/server/apache2/htdocs/ecshop/ecshop2/MobileAPI  
       script_name: /app/ansible-jobs/scripts/public/git_management.py 
 
     tasks:
-    - name: Git pull on ecshop_ecshop2_MobileAPI2
-      script: "{{script_name}}"  "{{MobileAPI2}}"
+    - name: Git pull on MobileAPI2
+      script: "{{script_name}}"  "{{mobileapi2}}"
       tags: pull MobileAPI2
+
+
+...
