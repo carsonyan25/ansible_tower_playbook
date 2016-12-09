@@ -7,6 +7,6 @@
       script_name: /app/ansible-jobs/scripts/public/git_management.py 
 
     tasks:
-    - name: Git pull on ecshop/ecshop2/MobileAPI2
+    - name: Git pull on ecshop_ecshop2_MobileAPI2
       script: "{{script_name}}"  "{{MobileAPI2}}"
       tags: pull MobileAPI2
