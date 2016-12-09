@@ -8,7 +8,7 @@
 
     tasks:
     - name: Git pull on MobileAPI2
-      script: "{{ script_name }}"  "{{ mobileapi2 }}"
+      script: "{{ script_name }}"  /home/server/apache2/htdocs/ecshop/ecshop2/MobileAPI2
       tags: pull MobileAPI2
 
 
