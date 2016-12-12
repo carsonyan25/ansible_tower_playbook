@@ -1,0 +1,11 @@
+---
+  - hosts: www.pcw365.com
+    gather_facts: no
+
+    tasks:
+    - name: run goodsinfo.sh
+      script: /app/ansible-jobs/scripts/AliyunPcw/goodsinfo.sh 
+      tags: run goodsinfo.sh
+
+
+...
