@@ -1,0 +1,9 @@
+---
+  - hosts: all
+    gather_facts: no
+    
+    tasks:
+    - name: rotate backup log
+      script: /app/ansible-jobs/scripts/AliyunSlave/rotate_BackupToCompany_logs.sh
+      tags: rotate backup log
+    
