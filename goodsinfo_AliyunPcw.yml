@@ -1,5 +1,5 @@
 ---
-  - hosts: www.pcw365.com
+  - hosts: all
     gather_facts: no
 
     tasks:
