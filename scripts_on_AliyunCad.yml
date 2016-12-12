@@ -1,0 +1,16 @@
+---
+  - hosts: all
+    gather_facts: no
+    
+    tasks:
+    - name: run_api
+      script: /app/ansible-jobs/scripts/AliyunCad/run-api.sh
+      tags: run_api
+    
+    - name: delshare
+      script: /app/ansible-jobs/scripts/AliyunCad/delshare.sh
+      tags: delshare
+
+    - name: remove_server_log
+      script: /app/ansible-jobs/scripts/AliyunCad/remove_server_log.sh
+      tags: remove_server_log
