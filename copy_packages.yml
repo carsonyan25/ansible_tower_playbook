@@ -7,7 +7,7 @@
 
     tasks:
     - name: copy lamp-pcw packages 
-      script: "{{create_dir_script}}" "{{production_path}}"
+      script: /app/ansible-jobs/scripts/public/create_production_dir.sh "{{production_path}}"
       copy:
         src: /app/ansible-jobs/software/lamp-pcw
         dest: "{{production_path}}"
@@ -17,7 +17,7 @@
       tags: copy lamp-pcw packages
 
     - name: copy lamp-common packages
-      script: "{{create_dir_script}}" "{{production_path}}"
+      script: /app/ansible-jobs/scripts/public/create_production_dir.sh "{{production_path}}"
       copy:
         src: /app/ansible-jobs/software/lamp-common
         dest: "{{production_path}}"
@@ -27,7 +27,7 @@
       tags: copy lamp-common packages
 
     - name: copy lnmp packages 
-      script: "{{create_dir_script}}" "{{production_path}}"
+      script: /app/ansible-jobs/scripts/public/create_production_dir.sh "{{production_path}}"
       copy:
         src: /app/ansible-jobs/software/lnmp
         dest: "{{production_path}}"
@@ -37,7 +37,7 @@
       tags: copy lnmp packages
 
     - name: custom copy 
-      script: "{{create_dir_script}}" "{{dest_path}}"
+      script: /app/ansible-jobs/scripts/public/create_production_dir.sh "{{dest_path}}"
       copy:
         src: "{{src_path}}"
         dest: "{{dest_path}}"
