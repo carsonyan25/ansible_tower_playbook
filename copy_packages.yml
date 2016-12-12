@@ -23,24 +23,24 @@
       group: wheel
       mode: "u=rw,g=r,o=r"
     tags: copy lamp-common packages
-   - name: copy lnmp packages 
+  - name: copy lnmp packages
      script: /app/ansible-jobs/scripts/public/create_production_dir.sh "{{ production_path }}"
-   - copy:
-       src: /app/ansible-jobs/software/lnmp
-       dest: "{{ production_path }}"
-       owner: tower
-       group: wheel
-       mode: "u=rw,g=r,o=r"
-     tags: copy lnmp packages
-   - name: custom copy 
-     script: /app/ansible-jobs/scripts/public/create_production_dir.sh "{{ production_path }}"
-   - copy:
-       src: "{{ src_path }}"
-       dest: "{{ dest_path }}"
-       owner: tower
-       group: wheel
-       mode: "u=rw,g=r,o=r"
-     tags: custom copy
+  - copy:
+      src: /app/ansible-jobs/software/lnmp
+      dest: "{{ production_path }}"
+      owner: tower
+      group: wheel
+      mode: "u=rw,g=r,o=r"
+    tags: copy lnmp packages
+  - name: custom copy 
+    script: /app/ansible-jobs/scripts/public/create_production_dir.sh "{{ production_path }}"
+  - copy:
+      src: "{{ src_path }}"
+      dest: "{{ dest_path }}"
+      owner: tower
+      group: wheel
+      mode: "u=rw,g=r,o=r"
+    tags: custom copy
 
 
 
