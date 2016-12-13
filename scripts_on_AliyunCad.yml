@@ -5,7 +5,7 @@
     tasks:
     - name: run api
       script: /app/ansible-jobs/scripts/AliyunCad/run-api.sh
-      tags: run_api
+      tags: run api
     
     - name: delshare
       script: /app/ansible-jobs/scripts/AliyunCad/delshare.sh
