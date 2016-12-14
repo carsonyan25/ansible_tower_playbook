@@ -7,14 +7,23 @@
      script: /app/ansible-jobs/scripts/AliyunPcw/goodsinfo.sh
      tags: goodsinfo       
  
-   - name: remove_apache_log
+   - name: remove apache outdate log
      script: /app/ansible-jobs/scripts/AliyunPcw/remove_server_log.sh
-     tags: remove_apache_log
+     tags: remove apache outdate log
      
-   - name: auto_remove_sync_log
-     script: /app/ansible-jobs/scripts/AliyunPcw/auto_remove_sync_log.sh
-     tags: auto_remove_sync_log
+   - name: differential db backup to AliyunSlave
+     script: /app/ansible-jobs/scrips/AliyunPcw/db_sync_to_slave.sh different
+     tags: differential db sync to AliyunSlave
 
-   - name: db_sync_to_slave_full
-     script: /app/ansible-jobs/scripts/AliyunPcw/db_sync_to_slave.sh full
-     tags: db_sync_to_slave_full
+   - name: full db backup to AliyunSlave
+     script: /app/ansible-jobs/scrips/AliyunPcw/db_sync_to_slave.sh full
+     tags: differential db sync to AliyunSlave
+
+   - name: differential web backup to AliyunSlave
+     script: /app/ansible-jobs/scrips/AliyunPcw/web_sync_to_slave.sh sync
+     tags: differential web backup to AliyunSlave
+
+   - name: remove sync log
+     script: /app/ansible-jobs/scrips/public/auto_remove_sync_log.sh
+     tags: remove sync log
+...

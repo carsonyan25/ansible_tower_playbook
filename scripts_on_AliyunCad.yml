@@ -1,5 +1,5 @@
 ---
-  - hosts: all
+  - hosts: cad.pcw365.com
     gather_facts: no 
     tasks:
     
@@ -14,5 +14,20 @@
     - name: count result
       script: /app/ansible-jobs/scripts/AliyunCad/run-api.sh
       tags: count result
+    
+    - name: differential db backup to AliyunSlave
+      script: /app/ansible-jobs/scrips/AliyunCad/db_sync_to_slave.sh different
+      tags: differential db sync to AliyunSlave
 
+    - name: full db backup to AliyunSlave
+      script: /app/ansible-jobs/scrips/AliyunCad/db_sync_to_slave.sh full
+      tags: differential db sync to AliyunSlave
+
+    - name: differential web backup to AliyunSlave
+      script: /app/ansible-jobs/scrips/AliyunCad/web_sync_to_slave.sh sync
+      tags: differential web backup to AliyunSlave
+    
+    - name: remove sync log
+      script: /app/ansible-jobs/scrips/public/auto_remove_sync_log.sh
+      tags: remove sync log
 ...
