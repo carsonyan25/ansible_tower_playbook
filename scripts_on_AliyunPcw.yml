@@ -12,18 +12,18 @@
      tags: remove apache outdate log
      
    - name: differential db backup to AliyunSlave
-     script: /app/ansible-jobs/scrips/AliyunPcw/db_sync_to_slave.sh different
+     script: /app/ansible-jobs/scripts/AliyunPcw/db_sync_to_slave.sh different
      tags: differential db backup to AliyunSlave
 
    - name: full db backup to AliyunSlave
-     script: /app/ansible-jobs/scrips/AliyunPcw/db_sync_to_slave.sh full
+     script: /app/ansible-jobs/scripts/AliyunPcw/db_sync_to_slave.sh full
      tags: full db backup to AliyunSlave
 
    - name: differential web backup to AliyunSlave
-     script: /app/ansible-jobs/scrips/AliyunPcw/web_sync_to_slave.sh sync
+     script: /app/ansible-jobs/scripts/AliyunPcw/web_sync_to_slave.sh sync
      tags: differential web backup to AliyunSlave
 
    - name: remove sync log
-     script: /app/ansible-jobs/scrips/public/auto_remove_sync_log.sh
+     script: /app/ansible-jobs/scripts/public/auto_remove_sync_log.sh
      tags: remove sync log
 ...
