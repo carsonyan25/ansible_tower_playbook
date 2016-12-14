@@ -1,7 +1,6 @@
 ---
  - hosts: www.pcw365.com
    gather_facts: no
-   labels: AliyunPcw
 
    tasks: 
    - name: goodsinfo

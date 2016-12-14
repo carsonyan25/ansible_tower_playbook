@@ -2,7 +2,6 @@
   - hosts: cad.pcw365.com
     gather_facts: no 
     tasks:
-    labels: AliyunCad
     
     - name: delshare
       script: /app/ansible-jobs/scripts/AliyunCad/delshare.sh
