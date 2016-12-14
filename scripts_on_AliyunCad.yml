@@ -4,8 +4,8 @@
     vars:
       dblog: "/root/shell/logs/db_sync_to_slave.log"
       weblog: "/root/shell/logs/web_sync_to_slave.log"
+    
     tasks:
-
     - name: delshare
       script: /app/ansible-jobs/scripts/AliyunCad/delshare.sh
       tags: delshare
