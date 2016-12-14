@@ -8,7 +8,7 @@
      tags: goodsinfo       
  
    - name: remove apache outdate log
-     script: /app/ansible-jobs/scripts/AliyunPcw/remove_server_log.sh
+     script: /app/ansible-jobs/scripts/public/remove_server_log.sh
      tags: remove apache outdate log
      
    - name: differential db backup to AliyunSlave
