@@ -2,9 +2,6 @@
   - hosts: all
     gather_facts: no 
     tasks:
-    - name: run api
-      script: /app/ansible-jobs/scripts/AliyunCad/run-api.sh
-      tags: run api
     
     - name: delshare
       script: /app/ansible-jobs/scripts/AliyunCad/delshare.sh
@@ -13,4 +10,9 @@
     - name: remove apache outdate log
       script: /app/ansible-jobs/scripts/AliyunCad/remove_server_log.sh
       tags: remove apache outdate log
+
+    - name: count result
+      script: /app/ansible-jobs/scripts/AliyunCad/run-api.sh
+      tags: count result
+
 ...
