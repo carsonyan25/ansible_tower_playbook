@@ -1,7 +1,6 @@
 ---
   - hosts: all
-    gather_facts: no
-    
+    gather_facts: no 
     tasks:
     - name: run api
       script: /app/ansible-jobs/scripts/AliyunCad/run-api.sh
@@ -14,5 +13,4 @@
     - name: remove apache outdate log
       script: /app/ansible-jobs/scripts/AliyunCad/remove_server_log.sh
       tags: remove apache outdate log
-
 ...
