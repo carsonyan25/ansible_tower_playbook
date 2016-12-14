@@ -1,6 +1,9 @@
 ---
  - hosts: www.pcw365.com
    gather_facts: no
+   vars: 
+     dblog: "/root/shell/logs/db_sync_to_slave.log"
+     weblog: "/root/shell/logs/web_sync_to_slave.log"
 
    tasks: 
    - name: goodsinfo
@@ -26,4 +29,12 @@
    - name: remove sync log
      script: /app/ansible-jobs/scripts/public/auto_remove_sync_log.sh
      tags: remove sync log
+
+   - name: view db sync backup log
+     script: /app/ansible-jobs/scripts/public/view_sync_log.py "{{ dblog }}"
+     tags: view db sync backup log
+
+   - name: view web sync backup log
+     script: /app/ansible-jobs/scripts/public/view_sync_log.py "{{ weblog }}"
+     tags: view web sync backup log
 ...
