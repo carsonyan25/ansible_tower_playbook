@@ -1,5 +1,5 @@
 ---
-  - hosts: cad.pcw365.com
+  - hosts: all
     gather_facts: no 
     vars:
       dblog: "/root/shell/logs/db_sync_to_slave.log"
