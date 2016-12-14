@@ -2,7 +2,10 @@
   - hosts: cad.pcw365.com
     gather_facts: no 
     tasks:
-    
+    vars:
+      dblog: "/root/shell/logs/db_sync_to_slave.log"
+      weblog: "/root/shell/logs/web_sync_to_slave.log"
+
     - name: delshare
       script: /app/ansible-jobs/scripts/AliyunCad/delshare.sh
       tags: delshare
