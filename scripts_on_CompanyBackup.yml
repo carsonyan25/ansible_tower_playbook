@@ -4,6 +4,6 @@
 
     tasks:
     - name: remove outdate backup
-      script: /app/ansible-jobs/scripts/CompanyBackup/scripts_CompanyBackup.sh
+      script: /app/ansible-jobs/scripts/CompanyBackup/remove_outdate_backup.sh
       tags: remove outdate backup
 ...
