@@ -1,9 +1,23 @@
 ---
-  - hosts: all
+  - hosts: tower.pcw365.com
     gather_facts: no
     
     tasks:
     - name: rotate backup log
       script: /app/ansible-jobs/scripts/AliyunSlave/rotate_BackupToCompany_logs.sh
       tags: rotate backup log
-    
+   
+    - name: sync pcw db backup to company
+      script: /app/ansible-jobs/scripts/AliyunSlave/rsync_backup_to_company.sh pcw db
+      tags: sync pcw db backup to company
+
+    - name: sync pcw web backup to company
+      script: /app/ansible-jobs/scripts/AliyunSlave/rsync_backup_to_company.sh pcw web
+      tags: sync pcw web backup to company
+
+    - name: sync cad db backup to company
+      script: /app/ansible-jobs/scripts/AliyunSlave/rsync_backup_to_company.sh cad db
+      tags: sync cad db backup to company
+
+
+...
