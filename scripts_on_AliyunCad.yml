@@ -14,9 +14,9 @@
       script: /app/ansible-jobs/scripts/public/remove_server_log.sh
       tags: remove apache outdate log
 
-    - name: count result
+    - name: statistics
       script: /app/ansible-jobs/scripts/AliyunCad/run-api.sh
-      tags: count result
+      tags: statistics
     
     - name: differential db backup to AliyunSlave
       script: /app/ansible-jobs/scripts/AliyunCad/db_sync_to_slave.sh different
