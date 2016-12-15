@@ -1,0 +1,9 @@
+---
+  - hosts: files.pcw365.com
+    gather_facts: no
+
+    task:
+    - name: remove outdate backup
+      script: /app/ansible-jobs/scripts/CompanyBackup/scripts_CompanyBackup.sh
+      tags: remove outdate backup
+...
