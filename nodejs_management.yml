@@ -2,11 +2,11 @@
   - hosts: www.pcw365.com
     gather_facts: no
     vars:
-      pcwstore-b2b: "/home/server/apache2/htdocs/ecshop/ecshop2/PcwStore-B2B"
+      pcwstoreB2B: "/home/server/apache2/htdocs/ecshop/ecshop2/PcwStore-B2B"
     
     tasks:
     - name: release
-      script: /app/ansible-jobs/scripts/AliyunPcw/nodejs_management.py PullandGrunt   "{{ pcwstore-b2b }}"
+      script: /app/ansible-jobs/scripts/AliyunPcw/nodejs_management.py PullandGrunt   "{{ pcwstoreB2B }}"
       tags: release
 
 ...
