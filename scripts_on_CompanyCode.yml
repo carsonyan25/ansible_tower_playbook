@@ -1,5 +1,5 @@
 ---
-  - hosts: files.pcw365.com
+  - hosts: code.pcw365.com
     gather_facts: no
 
     tasks:
@@ -8,7 +8,7 @@
       tags: remove outdate backup
 
     - name: renew ssl certificate
-      script: /app/ansible-jobs/scrip/public/rew_ssl_certificate.sh nginx
+      script: /app/ansible-jobs/scripts/CompanyBackup/renew_ssl_certificate.sh apache
       tags: renew ssl certificate
 
 ...
