@@ -11,4 +11,7 @@
       script: /app/ansible-jobs/scripts/public/renew_ssl_certificate.sh apache
       tags: renew ssl certificate
 
+    - name: curl url
+      script: /app/ansible-jobs/scripts/public/run-api.sh
+      tags: curl url
 ...
