@@ -4,17 +4,19 @@
 
     tasks:
     - name: restart apache
-      service: 
+      systemd: 
         name: apache
         state: restarted
       tags: restart apache
+
     - name: start apache
-      service: 
+      systemd: 
         name: apache
         state: started
       tags: start apache
+
     - name: stop apache
-      service: 
+      systemd: 
         name: apache
         state: stopped
       tags: stop apache
