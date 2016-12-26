@@ -1,0 +1,15 @@
+---
+  - hosts: all
+    gather_facts: no
+
+    tasks:
+    - name: custom copy 
+    - copy:
+        src: "{{ src_path }}"
+        dest: "{{ dest_path }}"
+        owner: "{{ owner  }}"
+        group: "{{ group }}"
+        mode:  "{{ mode }}"
+      tags: custom copy
+...
+
