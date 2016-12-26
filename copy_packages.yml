@@ -1,46 +1,47 @@
 ---
-- hosts: all
-  gather_facts: no
-  vars:
-  - production_path: /app/software/package
-  - create_dir_script: /app/ansible-jobs/scripts/public/create_production_dir.sh 
-  tasks:
-  - name: copy lamp-pcw packages 
-    #script: /app/ansible-jobs/scripts/public/create_production_dir.sh "{{ production_path }}"
-  - copy:
-      src: /app/ansible-jobs/software/lamp-pcw
-      dest: "{{ production_path }}"
-      owner: tower
-      group: wheel
-      mode: "u=rw,g=r,o=r"
-    tags: copy lamp-pcw packages
-  - name: copy lamp-common packages
-    #script: /app/ansible-jobs/scripts/public/create_production_dir.sh "{{ production_path }}"
-  - copy:
-      src: /app/ansible-jobs/software/lamp-common
-      dest: "{{ production_path }}"
-      owner: tower
-      group: wheel
-      mode: "u=rw,g=r,o=r"
-    tags: copy lamp-common packages
-  - name: copy lnmp packages
-    #script: /app/ansible-jobs/scripts/public/create_production_dir.sh "{{ production_path }}"
-  - copy:
-      src: /app/ansible-jobs/software/lnmp
-      dest: "{{ production_path }}"
-      owner: tower
-      group: wheel
-      mode: "u=rw,g=r,o=r"
-    tags: copy lnmp packages
-  - name: custom copy 
-    #script: /app/ansible-jobs/scripts/public/create_production_dir.sh "{{ production_path }}"
-  - copy:
-      src: "{{ src_path }}"
-      dest: "{{ dest_path }}"
-      owner: tower
-      group: wheel
-      mode: "u=rw,g=r,o=r"
-    tags: custom copy
+  - hosts: all
+    gather_facts: no
+    vars:
+      production_path: /app/software/package
+      create_dir_script: /app/ansible-jobs/scripts/public/create_production_dir.sh
+ 
+    tasks:
+    - name: copy lamp-pcw packages 
+      #script: /app/ansible-jobs/scripts/public/create_production_dir.sh "{{ production_path }}"
+    - copy:
+        src: /app/ansible-jobs/software/lamp-pcw
+        dest: "{{ production_path }}"
+        owner: tower
+        group: wheel
+        mode: "u=rw,g=r,o=r"
+      tags: copy lamp-pcw packages
+    - name: copy lamp-common packages
+      #script: /app/ansible-jobs/scripts/public/create_production_dir.sh "{{ production_path }}"
+    - copy:
+        src: /app/ansible-jobs/software/lamp-common
+        dest: "{{ production_path }}"
+        owner: tower
+        group: wheel
+        mode: "u=rw,g=r,o=r"
+      tags: copy lamp-common packages
+    - name: copy lnmp packages
+     #script: /app/ansible-jobs/scripts/public/create_production_dir.sh "{{ production_path }}"
+    - copy:
+        src: /app/ansible-jobs/software/lnmp
+        dest: "{{ production_path }}"
+        owner: tower
+        group: wheel
+        mode: "u=rw,g=r,o=r"
+      tags: copy lnmp packages
+    - name: custom copy 
+      #script: /app/ansible-jobs/scripts/public/create_production_dir.sh "{{ production_path }}"
+    - copy:
+        src: "{{ src_path }}"
+        dest: "{{ dest_path }}"
+        owner: "{{ owner  }}"
+        group: "{{ group }}"
+        mode: "{{ mode }}"
+      tags: custom copy
 
 
 
