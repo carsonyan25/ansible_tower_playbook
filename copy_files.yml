@@ -4,7 +4,7 @@
 
     tasks:
     - name: custom copy 
-    - copy:
+      copy:
         src: "{{ src_path }}"
         dest: "{{ dest_path }}"
         owner: "{{ owner  }}"
