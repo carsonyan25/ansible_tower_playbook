@@ -4,15 +4,15 @@
 
     tasks:
     - name: install lamp-pcw
-      script: /app/ansible-jobs/scripts/public/install_lamp_pcw.sh
+      script: /app/ansible-jobs/scripts/public/install_lamp_pcw.sh "{{ package }}"
       tags: install lamp-pcw
 
     - name: install lamp-common
-      script: /app/ansible-jobs/scripts/public/install_lamp_common.sh
+      script: /app/ansible-jobs/scripts/public/install_lamp_common.sh "{{ package }}"
       tags: install lamp-common
 
     - name: install lnmp
-      script: /app/ansible-jobs/scripts/public/install_lnmp.sh
+      script: /app/ansible-jobs/scripts/public/install_lnmp.sh "{{ package }}"
       tags: install lnmp
 
 
