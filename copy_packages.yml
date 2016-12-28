@@ -39,7 +39,7 @@
         dest: "{{ dest_path }}"
         owner: "{{ owner  }}"
         group: "{{ group }}"
-        mode:  "{{ mode }}"
+        mode:  "u=rw,g=rw,o=r"
       tags: custom copy
 
 ...
