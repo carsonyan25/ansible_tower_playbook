@@ -38,7 +38,9 @@
      script: /app/ansible-jobs/scripts/public/view_sync_log.py "{{ weblog }}"
      tags: view web sync backup log
 
-    - name: gather mysql slow query
-      script: /app/ansible-jobs/scripts/AliyunPcw/lepus_slowquery_pcw.sh /dev/null 2<&1
-      tags: gather mysql slow query
+   - name: gather mysql slow query
+     script: /app/ansible-jobs/scripts/AliyunPcw/lepus_slowquery_pcw.sh /dev/null 2<&1
+     tags: gather mysql slow query
+
+
 ...
