@@ -42,5 +42,7 @@
      script: /app/ansible-jobs/scripts/AliyunPcw/lepus_slowquery_pcw.sh /dev/null 2<&1
      tags: gather mysql slow query
 
-
+   - name: generate xml 
+     script: /app/ansible-jobs/scripts/AliyunPcw/generate_xml.sh
+     tags: generate xml
 ...
