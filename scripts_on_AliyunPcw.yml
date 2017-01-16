@@ -43,6 +43,6 @@
      tags: gather mysql slow query
 
    - name: generate xml 
-     script: /app/ansible-jobs/scripts/AliyunPcw/generate_xml.sh
+     script: /app/ansible-jobs/scripts/AliyunPcw/generate_xml.py "{{ api }}"
      tags: generate xml
 ...
