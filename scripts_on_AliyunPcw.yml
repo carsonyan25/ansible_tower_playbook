@@ -6,9 +6,9 @@
      weblog: "/root/shell/logs/web_sync_to_slave.log"
 
    tasks: 
-   - name: goodsinfo
-     script: /app/ansible-jobs/scripts/AliyunPcw/goodsinfo.sh
-     tags: goodsinfo       
+   - name: goodsinfo_autoconfirm
+     script: /app/ansible-jobs/scripts/AliyunPcw/goodsinfo_autoconfirm.sh
+     tags: goodsinfo_autoconfirm       
  
    - name: remove apache outdate log
      script: /app/ansible-jobs/scripts/public/remove_server_log.sh
