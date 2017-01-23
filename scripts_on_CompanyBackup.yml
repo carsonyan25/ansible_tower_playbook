@@ -4,11 +4,14 @@
 
     tasks:
     - name: remove outdate backup
-      script: /app/ansible-jobs/scripts/CompanyBackup/remove_outdate_backup.sh
+      script: /app/ansible-jobs/scripts/CompanyServer/remove_outdate_backup.sh
       tags: remove outdate backup
 
     - name: renew ssl certificate
       script: /app/ansible-jobs/scripts/public/renew_ssl_certificate.sh nginx
       tags: renew ssl certificate
 
+    - name: update code server database
+      script: /app/ansible-jobs/scripts/CompanyServer/update_all_database.py  
+      tags: update code server database
 ...
