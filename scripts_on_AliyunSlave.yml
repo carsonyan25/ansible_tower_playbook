@@ -19,5 +19,8 @@
       script: /app/ansible-jobs/scripts/AliyunSlave/rsync_backup_to_company.sh cad db
       tags: sync cad db backup to company
 
+    - name: sync mobile db backup to company
+      script: /app/ansible-jobs/scripts/AliyunSlave/rsync_backup_to_company.sh mobile db
+      tags: sync mobile db backup to company
 
 ...
