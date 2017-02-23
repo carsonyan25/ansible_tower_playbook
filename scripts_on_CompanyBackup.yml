@@ -8,7 +8,7 @@
       tags: remove outdate backup
 
     - name: renew ssl certificate
-      script: /app/ansible-jobs/scripts/public/renew_ssl_certificate.sh nginx
+      script: /app/ansible-jobs/scripts/CompanyServer/renew_ssl_certificate.sh nginx
       tags: renew ssl certificate
  
     - name: copy backup to seafile

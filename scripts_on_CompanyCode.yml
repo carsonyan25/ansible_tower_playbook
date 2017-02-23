@@ -3,15 +3,12 @@
     gather_facts: no
 
     tasks:
-    - name: remove outdate backup
-      script: /app/ansible-jobs/scripts/CompanyBackup/remove_outdate_backup.sh
-      tags: remove outdate backup
 
     - name: renew ssl certificate
-      script: /app/ansible-jobs/scripts/public/renew_ssl_certificate.sh apache
+      script: /app/ansible-jobs/scripts/CompanyServer/renew_ssl_certificate.sh apache
       tags: renew ssl certificate
 
     - name: curl url
-      script: /app/ansible-jobs/scripts/public/run-api.sh
+      script: /app/ansible-jobs/scripts/CompanyServer/run-api.sh
       tags: curl url
 ...
