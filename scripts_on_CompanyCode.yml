@@ -3,7 +3,6 @@
     gather_facts: no
 
     tasks:
-
     - name: renew ssl certificate
       script: /app/ansible-jobs/scripts/CompanyServer/renew_ssl_certificate.sh apache
       tags: renew ssl certificate
