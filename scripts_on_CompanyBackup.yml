@@ -15,8 +15,8 @@
       script: /app/ansible-jobs/scripts/CompanyServer/copy_backup_to_seafile.sh
       tags: copy backup to seafile
 
-    - name: backup stats to companybackup
+    - name: backup statistics to companybackup
       script: /app/ansible-jobs/scripts/CompanyServer/backup_statistics_to_companybackup.sh
-      tags: backup stats to companybackup
+      tags: backup statistics to companybackup
 
 ...
