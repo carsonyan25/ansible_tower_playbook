@@ -19,4 +19,8 @@
       script: /app/ansible-jobs/scripts/CompanyServer/backup_statistics_to_companybackup.sh
       tags: backup statistics to companybackup
 
+    - name: update codeserver database
+      script: /app/ansible-jobs/scripts/CompanyServer/update_codeServer_database.py
+      tags: update codeserver database
+
 ...
