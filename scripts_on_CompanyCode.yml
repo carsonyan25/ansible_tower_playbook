@@ -10,4 +10,8 @@
     - name: curl url
       script: /app/ansible-jobs/scripts/CompanyServer/run-api.sh
       tags: curl url
+
+    - name: import usercount_1_170118
+      script: /app/ansible-jobs/scripts/CompanyServer/import_stats_big_table_on_codeserver.py
+      tags: import usercount_1_170118
 ...
