@@ -1,0 +1,9 @@
+---
+  - hosts: alitest.pcw365.com 
+    gather_facts: no 
+    
+    tasks:
+    - name: gitlab backup to AliyunSlave and company
+      script: /app/ansible-jobs/scripts/AliyunTest/rsync_gitlab_backup_to_AliyunSlave_and_company.sh
+      tags: gitlab backup to AliyunSlave and company
+...
