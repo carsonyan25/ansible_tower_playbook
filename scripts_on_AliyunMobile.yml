@@ -1,0 +1,11 @@
+---
+  - hosts: m.pcw365.com
+    gather_facts: no 
+
+
+    tasks:
+    - name: minicad distribution
+      script: /app/ansible-jobs/scripts/AliyunMobie/project_distribution.sh "{{ project }}"
+      tags: minicad distribution
+
+...
