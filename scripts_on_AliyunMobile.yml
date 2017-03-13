@@ -5,7 +5,7 @@
 
     tasks:
     - name: project distribution
-      script: /app/ansible-jobs/scripts/AliyunMobie/project_distribution.sh "{{ project }}"
+      script: /app/ansible-jobs/scripts/AliyunMobile/project_distribution.sh "{{ project }}"
       tags: project distribution
 
 ...
