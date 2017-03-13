@@ -4,8 +4,8 @@
 
 
     tasks:
-    - name: minicad distribution
+    - name: project distribution
       script: /app/ansible-jobs/scripts/AliyunMobie/project_distribution.sh "{{ project }}"
-      tags: minicad distribution
+      tags: project distribution
 
 ...
