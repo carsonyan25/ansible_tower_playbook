@@ -16,7 +16,7 @@
       tags: generate cad stats
 
     - name: svn backup
-      script: /app/ansible-jobs/scripts/CompanyServer/svn_backup.sh
+      script: /app/ansible-jobs/scripts/CompanyServer/svn_backup_on_codeserver.sh
       tags: svn backup
 
 ...
