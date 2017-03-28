@@ -4,5 +4,5 @@
 
   tasks:
   - name: files in caddownload on Tianji 
-    shell: ls -alR /home/download/aec/aec/caddownload
+    shell: ls  --sort=time -alR /home/download/aec/aec/caddownload
 

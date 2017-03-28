@@ -4,12 +4,12 @@
 
   tasks:
   - name: files on homecost
-    command: ls -al /home/web/webapps/ROOT/download/homecost/
+    command: ls --sort=time -al /home/web/webapps/ROOT/download/homecost/
   - name: files on DWGView2011
-    shell: ls -al /home/web/webapps/ROOT/download/DWGView2011/
+    shell: ls --sort=time -al /home/web/webapps/ROOT/download/DWGView2011/
   - name: files on pincaibao 
-    shell: ls -al /home/web/webapps/ROOT/download/pincaibao/ 
+    shell: ls --sort=time -al /home/web/webapps/ROOT/download/pincaibao/ 
   - name: files on homegantt 
-    shell: ls -al /home/web/webapps/ROOT/download/homegantt/
+    shell: ls --sort=time -al /home/web/webapps/ROOT/download/homegantt/
   - name: files on  cadview
-    shell: ls -al /home/web/webapps/ROOT/download/cadview/ 
+    shell: ls --sort=time -al /home/web/webapps/ROOT/download/cadview/ 
