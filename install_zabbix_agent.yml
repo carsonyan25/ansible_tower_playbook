@@ -16,7 +16,7 @@
       tags: copy zabbix package
 
     - name: install and setting zabbix
-      script: /app/ansible-jobs/scripts/public/install_and_setting_zabbix.sh  "{{ listenip }}"
+      script: /app/ansible-jobs/scripts/public/install_and_setting_zabbix.sh  "{{ listenip }}" "{{ install_prefix }}"
       tags: install and setting zabbix
 
     - name: copy zabbix extra configuration file
@@ -29,7 +29,7 @@
       tags: copy zabbix extra configuration file
 
     - name: post installation 
-      shell: cd "{{ config_dir  }}" && tar -xf "{{ config_pkg }}" && mkdir -p /var/lib/zabbix-bak && mv "{{ config_dir }}"/.my.cnf  /var/lib/zabbix-bak/.my.cnf
+      shell: cd "{{ config_dir  }}" && tar -xf "{{ config_pkg }}" && mkdir -p /var/lib/zabbix && mv "{{ config_dir }}"/.my.cnf  /var/lib/zabbix/.my.cnf
       tags: post installation
     
     - name: mention before start zabbix_agentd
