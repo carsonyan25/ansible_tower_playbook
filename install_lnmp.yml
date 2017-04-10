@@ -32,6 +32,4 @@
     - name: mention before use lnmp
       script: /app/ansible-jobs/scripts/public/install_lnmp.sh mention
       tags: mention before use lnmp
-
-
 ... 

@@ -29,11 +29,10 @@
       tags: copy zabbix extra configuration file
 
     - name: post installation 
-      shell: cd "{{ config_dir  }}" && tar -xf "{{ config_pkg }}" && mkdir -p /var/lib/zabbix && mv "{{ config_dir }}"/.my.cnf  /var/lib/zabbix/.my.cnf
+      shell: cd "{{ config_dir  }}" && tar -xf "{{ config_pkg }}" && mkdir -p /var/lib/zabbix-bak && mv "{{ config_dir }}"/.my.cnf  /var/lib/zabbix-bak/.my.cnf
       tags: post installation
     
     - name: mention before start zabbix_agentd
-      shell: echo "you should modify zabbix_agentd.conf ,userparameter_xx.conf and /var/lib/zabbix/.my.cnf before start zabbix_agentd " 
+      shell: echo "you should modify zabbix_agentd.conf ,userparameter_xx.conf and /var/lib/zabbix-bak/.my.cnf before start zabbix_agentd " 
       tags: mention before start zabbix_agentd 
-
 ...
