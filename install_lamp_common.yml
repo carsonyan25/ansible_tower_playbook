@@ -29,8 +29,7 @@
       tags: install php
 
     - name: mention before use lamp-common
-      shell:  echo 'source package LAMP(apache-2.4.23 ,mysql-boost-5.7.13 and php-5.4.3) has been installed to "{{ install_prefix  }}" ' && echo "you need to initialize mysql manully ! " 
+      script: /app/ansible-jobs/scripts/public/install_lamp_common.sh mention  "{{ install_prefix }}"
       tags: mention before use lamp-common
-
 
 ... 

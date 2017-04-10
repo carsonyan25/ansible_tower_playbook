@@ -29,7 +29,7 @@
       tags: install php
 
     - name: mention before use lamp-pcw
-      shell:  echo 'source package LAMP(apache-2.2.25 ,mysql-boost-5.1.73 and php-5.4.3) has been installed to /home/server' && echo "you need to initialize mysql manully ! " 
+      script: /app/ansible-jobs/scripts/public/install_lamp_pcw.sh mention 
       tags: mention before use lamp-pcw
 
 ... 
