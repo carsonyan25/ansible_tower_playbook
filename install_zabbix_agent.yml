@@ -16,23 +16,23 @@
       tags: copy zabbix package
 
     - name: install and setting zabbix
-      script: /app/ansible-jobs/scripts/public/install_and_setting_zabbix.sh install_set "{{ listenip }}" "{{ install_prefix }}"
+      script: /app/ansible-jobs/scripts/public/install_and_setting_zabbix.sh install_set "{{ listenip }}" 
       tags: install and setting zabbix
 
     - name: copy zabbix extra configuration file
       copy:
         src: /app/ansible-jobs/software/tools/zabbix_agentd_configuration_files.tar.gz
-        dest: /app/zabbix_agentd/etc/zabbix_agentd.conf.d/zabbix_agentd_configuration_files.tar.gz
+        dest: /app/zabbix_agentd/etc/zabbix_agentd.conf.d/zabbix_agentd_configuration_files.tar.gz 
         owner: root
         group: root
         mode: 0644
       tags: copy zabbix extra configuration file
 
     - name: post installation 
-      script: /app/ansible-jobs/scripts/public/install_and_setting_zabbix.sh post_install
+      script: /app/ansible-jobs/scripts/public/install_and_setting_zabbix.sh post_install 
       tags: post installation
     
     - name: mention before start zabbix_agentd
-      script: /app/ansible-jobs/scripts/public/install_and_setting_zabbix.sh mention
+      script: /app/ansible-jobs/scripts/public/install_and_setting_zabbix.sh mention 
       tags: mention before start zabbix_agentd 
 ...
