@@ -1,7 +1,6 @@
 ---
   - hosts: all
     gather_facts: no
-    vars:
 
     tasks:
     - name: copy lamp-common package to target server

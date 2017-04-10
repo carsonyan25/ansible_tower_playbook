@@ -1,7 +1,6 @@
 ---
   - hosts: all
     gather_facts: no
-    vars:
 
     tasks:
     - name: copy lamp-pcw package to target server

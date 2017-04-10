@@ -1,9 +1,9 @@
 ---
   - hosts: all
     gather_facts: no
-      vars:
-        config_pkg: zabbix_agentd_configuration_files.tar.gz
-        config_dir: /app/zabbix_agentd/etc/zabbix_agentd.conf.d
+    vars:
+      config_pkg: zabbix_agentd_configuration_files.tar.gz
+      config_dir: /app/zabbix_agentd/etc/zabbix_agentd.conf.d
 
     tasks:
     - name: copy zabbix package

@@ -1,7 +1,6 @@
 ---
   - hosts: all
     gather_facts: no
-    vars:
 
     tasks:
     - name: copy lnmp package to target server
