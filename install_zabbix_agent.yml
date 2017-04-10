@@ -1,0 +1,39 @@
+---
+  - hosts: all
+    gather_facts: no
+      vars:
+        config_pkg: zabbix_agentd_configuration_files.tar.gz
+        config_dir: /app/zabbix_agentd/etc/zabbix_agentd.conf.d
+
+    tasks:
+    - name: copy zabbix package
+      copy: 
+        src: /app/ansible-jobs/software/tools/zabbix-3.0.4.tar.gz
+        dest: /app/software/package/zabbix-3.0.4.tar.gz
+        owner: root
+        group: root
+        mode: 0644
+      tags: copy zabbix package
+
+    - name: install and setting zabbix
+      script: /app/ansible-jobs/scripts/public/install_and_setting_zabbix.sh  "{{ listenip }}"
+      tags: install and setting zabbix
+
+    - name: copy zabbix extra configuration file
+      copy:
+        src: /app/ansible-jobs/software/tools/zabbix_agentd_configuration_files.tar.gz
+        dest: /app/zabbix_agentd/etc/zabbix_agentd.conf.d/zabbix_agentd_configuration_files.tar.gz
+        owner: root
+        group: root
+        mode: 0644
+      tags: copy zabbix extra configuration file
+
+    - name: post installation 
+      shell: cd "{{ config_dir  }}" && tar -xf "{{ config_pkg }}" && mkdir -p /var/lib/zabbix && mv "{{ config_dir }}"/.my.cnf  /var/lib/zabbix/.my.cnf
+      tags: post installation
+    
+    - name: mention before start zabbix_agentd
+      shell: echo "you should modify zabbix_agentd.conf ,userparameter_xx.conf and /var/lib/zabbix/.my.cnf before start zabbix_agentd " 
+      tags: mention before start zabbix_agentd 
+
+...

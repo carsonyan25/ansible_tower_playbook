@@ -1,0 +1,37 @@
+---
+  - hosts: all
+    gather_facts: no
+    vars:
+
+    tasks:
+    - name: copy lamp-common package to target server
+      copy:
+        src: /app/ansible-jobs/software/lamp-common
+        dest: /app/software/package/
+        owner: root
+        group: root
+        mode: 0644
+      tags: copy lamp-common package to target server
+      
+    - name: prepare installation
+      script: /app/ansible-jobs/scripts/public/install_lamp_common.sh prepare "{{ install_prefix }}"
+      tags: prepare installation
+
+    - name: install apache
+      script: /app/ansible-jobs/scripts/public/install_lamp_common.sh apache "{{ install_prefix }}"
+      tags: install apache
+
+    - name: install mysql
+      script: /app/ansible-jobs/scripts/public/install_lamp_common.sh mysql "{{ install_prefix }}"
+      tags: install mysql
+
+    - name: install php
+      script: /app/ansible-jobs/scripts/public/install_lamp_common.sh php "{{ install_prefix }}"
+      tags: install php
+
+    - name: mention before use lamp-common
+      shell:  echo 'source package LAMP(apache-2.4.23 ,mysql-boost-5.7.13 and php-5.4.3) has been installed to "{{ install_prefix  }}" ' && echo "you need to initialize mysql manully ! " 
+      tags: mention before use lamp-common
+
+
+... 

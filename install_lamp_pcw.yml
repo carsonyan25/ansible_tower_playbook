@@ -1,0 +1,37 @@
+---
+  - hosts: all
+    gather_facts: no
+    vars:
+
+    tasks:
+    - name: copy lamp-pcw package to target server
+      copy:
+        src: /app/ansible-jobs/software/lamp-pcw
+        dest: /app/software/package/
+        owner: root
+        group: root
+        mode: 0644
+      tags: copy lamp-pcw package to target server
+      
+    - name: prepare installation
+      script: /app/ansible-jobs/scripts/public/install_lamp_pcw.sh prepare 
+      tags: prepare installation
+
+    - name: install apache
+      script: /app/ansible-jobs/scripts/public/install_lamp_pcw.sh apache 
+      tags: install apache
+
+    - name: install mysql
+      script: /app/ansible-jobs/scripts/public/install_lamp_pcw.sh mysql 
+      tags: install mysql
+
+    - name: install php
+      script: /app/ansible-jobs/scripts/public/install_lamp_pcw.sh php 
+      tags: install php
+
+    - name: mention before use lamp-pcw
+      shell:  echo 'source package LAMP(apache-2.2.25 ,mysql-boost-5.1.73 and php-5.4.3) has been installed to /home/server ' && echo "you need to initialize mysql manully ! " 
+      tags: mention before use lamp-pcw
+
+
+... 

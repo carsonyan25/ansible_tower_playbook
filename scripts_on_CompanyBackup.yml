@@ -23,4 +23,7 @@
       script: /app/ansible-jobs/scripts/CompanyServer/update_codeServer_database.py
       tags: update codeserver database
 
+    - name: update codeserver test database
+      script: /app/ansible-jobs/scripts/CompanyServer/update_codeServer_bak_database.py
+      tags: update codeserver test database
 ...
