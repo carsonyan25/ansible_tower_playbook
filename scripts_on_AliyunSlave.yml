@@ -27,6 +27,10 @@
       script: /app/ansible-jobs/scripts/AliyunSlave/rsync_backup_to_company.sh stats db
       tags: sync stats db backup to company
 
+    - name: sync usa cad db backup to company
+      script: /app/ansible-jobs/scripts/AliyunSlave/rsync_backup_to_company.sh usa db
+      tags: sync usa cad db backup to company
+
     - name: remove outdate gitlab backups
       script: /app/ansible-jobs/scripts/AliyunSlave/remove_outdate_gitlab_backups.sh
       tags: remove outdate gitlab backups

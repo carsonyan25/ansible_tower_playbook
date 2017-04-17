@@ -1,0 +1,10 @@
+---
+  - hosts: usa.pcw365.com
+    gather_facts: no
+    
+    tasks:
+    - name: sync usa cad db backup to AliyunSlave
+      script: /app/ansible-jobs/scripts/AliyunUsaCad/db_backup_sync_to_aliyun_slave.sh
+      tags: sync usa cad db backup to AliyunSlave
+
+...
