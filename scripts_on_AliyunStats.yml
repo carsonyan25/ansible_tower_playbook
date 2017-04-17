@@ -1,0 +1,10 @@
+---
+  - hosts: stats.pcw365.com
+    gather_facts: no
+    
+    tasks:
+    - name: sync stats db backup to AliyunSlave
+      script: /app/ansible-jobs/scripts/AliyunStats/db_backup_sync_to_aliyun_slave.sh
+      tags: sync stats db backup to AliyunSlave
+
+...
