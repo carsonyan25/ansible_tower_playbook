@@ -26,4 +26,8 @@
     - name: update codeserver test database
       script: /app/ansible-jobs/scripts/CompanyServer/update_codeServer_bak_database.py
       tags: update codeserver test database
+
+    - name: remount rtx_share
+      script: /app/ansible-jobs/scripts/CompanyServer/remount_rtx_share.sh
+      tags: remount rtx_share 
 ...
