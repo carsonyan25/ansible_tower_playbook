@@ -7,4 +7,7 @@
       script: /app/ansible-jobs/scripts/AliyunStats/db_backup_sync_to_aliyun_slave.sh
       tags: sync stats db backup to AliyunSlave
 
+    - name: generate cad series software stats 
+      script: /app/ansible-jobs/scripts/AliyunStats/call_api.py stats
+      tags: generate cad series software stats
 ...
