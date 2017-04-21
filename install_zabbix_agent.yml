@@ -16,7 +16,7 @@
       tags: copy zabbix package
 
     - name: install and setting zabbix
-      script: /app/ansible-jobs/scripts/public/install_and_setting_zabbix.sh install_set "{{ listenip }}" 
+      script: /app/ansible-jobs/scripts/public/install_and_setting_zabbix.sh install_set "{{ listenip }}" "{{ serverip }}" 
       tags: install and setting zabbix
 
     - name: copy zabbix extra configuration file
