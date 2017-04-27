@@ -11,9 +11,9 @@
       script: /app/ansible-jobs/scripts/CompanyServer/renew_ssl_certificate.sh nginx
       tags: renew ssl certificate
  
-    - name: copy backup to seafile
-      script: /app/ansible-jobs/scripts/CompanyServer/copy_backup_to_seafile.sh
-      tags: copy backup to seafile
+    - name: copy all backups to rtx server
+      script: /app/ansible-jobs/scripts/CompanyServer/copy_backups_to_rtx_server.sh
+      tags: copy all backups to rtx server
 
     - name: backup statistics to companybackup
       script: /app/ansible-jobs/scripts/CompanyServer/backup_statistics_to_companybackup.sh
